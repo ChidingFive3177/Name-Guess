@@ -5,12 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name & Guess</title>
+
+    <link rel="stylesheet" href="resources/styles/styles.css">
     <script type="module" src="resources/scripts/app.js"></script>
     
 </head>
+
+
+
 <body>
-    <label for="name">Enter your name</label>
-    <input id="name" type="text">
-    <button type="submit" onclick="getName()">Enter</button>
+
+    <header>
+        <div class="main-header">
+            <h1>Name & Guess</h1>
+        </div>
+    </header>
+
+
+    <div class="main-container">
+        <div>
+            <aside>
+                <div class="guessed-names-side">
+                    <div class="guessed-names-side-header">
+                        <h3>Guessed Names</h3>
+                        <img id="reset" src="resources/images/reset.svg" alt="reset button">
+                    </div>
+                    <ul id="guessed-names">
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+
+        <div>
+            <main>
+    
+                <div class="right-container">
+                    <section>
+                        <div class="enter-name-section">
+                            <label for="name">Enter your name:</label>
+                            <br>
+                            <div class="enter-name-section-data">
+                                <input id="name" type="text">
+                                <button id="submitBtn" type="submit">Guess</button>
+                            </div>
+                            <span id="error"></span>
+                        </div>
+                    </section>
+            
+                    <section>
+                        <div class="gender-section">
+                            <label for="Gender">Gender:</label>
+                            <img id="Gender" alt="Gender">
+                        </div>
+                    </section>
+            
+                    <section>
+                        <div class="age-section">
+                            <label for="Age">Age:</label>
+                            <p id="Age"></p>
+                        </div>
+                    </section>
+            
+                    <section>
+                        <div class="countries-section">
+                            <label for="Countries">Countries:</label>
+                            <ul id="Countries"></ul>
+                        </div>
+                    </section>
+                </div>
+        
+        
+            </main>
+        </div>
+
+    </div>
+
+
+    
+
 </body>
 </html>

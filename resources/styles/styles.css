@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=VT323&display=swap');
+
+:root{
+    --main-font: 'Montserrat', sans-serif;
+    --header-font: 'VT323', monospace, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    font-family: var(--main-font);
+}
+
+.main-header h1{
+    font-family: var(--header-font);
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    margin: 0px 50px;
+}
+
+.main-container div:nth-child(2){
+    width: 100%;
+}
+
+.guessed-names-side ul li{
+    text-align: center;
+}
+
+.guessed-names-side-header{
+    display: flex;
+    justify-items: space-between;
+}
+
+.guessed-names-side img{
+    width: 25px;
+    height: 25px;
+    transform: rotate(180deg);
+    right: 0;
+    margin-left: 10px;
+    cursor:pointer;
+}
+
+.right-container{
+    border: 1px solid black;
+    padding: 25px 25px;
+    border-radius: 10px;   
+    margin-left: 24px;
+}
+
+.enter-name-section input{
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 6px;
+    width: 70%;
+}
+
+.enter-name-section button{
+    padding: 5px;
+    border-radius: 5px;
+    width: 25%;
+    background-color: #6c63ff;
+}
+
+.enter-name-section-data{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+}
+
+.right-container .gender-section, .age-section, .countries-section {
+    display: none;
+}
+
+.gender-section{
+    height:100px;
+    align-items: center;
+}
+
+#Gender{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    padding: 8px;
+    margin-left: 25px;
+}
+
+.flag{
+    width: 150px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.countries-section{
+    align-items: center;
+}
+
+.countries-section ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.countries-section ul li{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 680px) {
+    .main-container{
+        display: block;
+    }
+
+    .guessed-names-side ul li{
+        text-align: left;
+    }
+
+    .guessed-names-side{
+        margin-bottom: 24px;
+    }
+
+    
+    .right-container{
+        margin-left: 0px;
+    }
+  }
